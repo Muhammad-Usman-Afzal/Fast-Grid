@@ -1,0 +1,29 @@
+name: Fast Grid CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+        
+    - name: Restore Dependencies
+      run: dotnet restore BazaarHub.Backend/BazaarHub.Backend.csproj
+      
+    - name: Build Fast Grid Backend
+      run: dotnet build BazaarHub.Backend/BazaarHub.Backend.csproj --no-restore --configuration Release
+      
+    - name: Publish Artifacts
+      run: dotnet publish BazaarHub.Backend/BazaarHub.Backend.csproj --configuration Release --output ./publish-output
