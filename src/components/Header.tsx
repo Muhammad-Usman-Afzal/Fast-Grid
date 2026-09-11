@@ -64,7 +64,7 @@ export default function Header() {
       <div className="max-w-[1400px] mx-auto px-3 sm:px-4 py-2 flex items-center gap-2 sm:gap-3">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
-          <span className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">LUXO</span>
+          <span className="text-xl sm:text-2xl font-extrabold bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">LUXOM</span>
           
         </Link>
 
