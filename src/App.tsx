@@ -92,11 +92,3 @@ export default function App() {
 }
 
 
-function App() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-      ThisIsAnErrorTextWithoutAnyTag  {/* Yeh line error degi */}
-    </div>
-  );
-}
